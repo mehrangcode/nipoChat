@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Mary — creative designer & dreamer. Portfolio, gallery and contact." />
+  <title>Mary ✿ Creative Portfolio</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- soft floating background -->
+  <div class="bg-decor" aria-hidden="true">
+    <span class="blob blob--1"></span>
+    <span class="blob blob--2"></span>
+    <span class="blob blob--3"></span>
+    <span class="sparkle s1">✿</span>
+    <span class="sparkle s2">❀</span>
+    <span class="sparkle s3">✦</span>
+    <span class="sparkle s4">♡</span>
+  </div>
+
+  <!-- NAV -->
+  <header class="nav">
+    <a href="#home" class="brand" data-link>
+      <img src="assets/favicon.svg" alt="" class="brand__mark" />
+      <span>Mary</span>
+    </a>
+    <button class="nav__toggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav__links" id="menu">
+      <a href="#home" data-link class="is-active">Home</a>
+      <a href="#about" data-link>About</a>
+      <a href="#gallery" data-link>Gallery</a>
+      <a href="#contact" data-link>Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ============ HOME ============ -->
+    <section class="page active" id="home" data-page>
+      <div class="hero">
+        <div class="hero__text">
+          <p class="eyebrow reveal">Hello, lovely! ✿</p>
+          <h1 class="reveal">I'm Mary — a <span class="grad">creative designer</span> &amp; dreamer</h1>
+          <p class="lead reveal">I craft warm, playful brands and illustrations that make people smile.
+            Welcome to my cosy little corner of the internet.</p>
+          <div class="hero__cta reveal">
+            <a href="#gallery" data-link class="btn btn--primary">View my work</a>
+            <a href="#contact" data-link class="btn btn--ghost">Say hello 💌</a>
+          </div>
+          <div class="hero__stats reveal">
+            <div><strong>60+</strong><span>happy clients</span></div>
+            <div><strong>120+</strong><span>projects</span></div>
+            <div><strong>5★</strong><span>sweet reviews</span></div>
+          </div>
+        </div>
+        <div class="hero__art reveal">
+          <div class="art-card art-card--float">
+            <img src="assets/avatar.svg" alt="Illustration of Mary" />
+            <span class="art-card__chip">designer ✿ illustrator</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="feature-row">
+        <article class="feature reveal">
+          <div class="feature__icon">🎨</div>
+          <h3>Branding</h3>
+          <p>Soft, memorable identities with personality and heart.</p>
+        </article>
+        <article class="feature reveal">
+          <div class="feature__icon">✏️</div>
+          <h3>Illustration</h3>
+          <p>Cute, hand-made illustrations for every cosy story.</p>
+        </article>
+        <article class="feature reveal">
+          <div class="feature__icon">💻</div>
+          <h3>Web Design</h3>
+          <p>Minimal, friendly websites that feel just like a hug.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="page" id="about" data-page>
+      <div class="section-head reveal">
+        <p class="eyebrow">A little about me</p>
+        <h2>Nice to meet you ♡</h2>
+      </div>
+      <div class="about">
+        <div class="about__photo reveal">
+          <img src="assets/avatar.svg" alt="Illustration of Mary" />
+          <span class="about__badge">✿ since 2019</span>
+        </div>
+        <div class="about__body reveal">
+          <p>I'm Mary, a creative designer who believes good design should feel kind.
+            For the past few years I've helped dreamers, makers and small businesses tell
+            their stories with colour, warmth and a sprinkle of whimsy.</p>
+          <p>When I'm not drawing, you'll find me with a cup of tea, a good playlist,
+            and far too many sticky notes. ☁️</p>
+          <h4>Things I'm good at</h4>
+          <ul class="tags">
+            <li>Brand Identity</li><li>Illustration</li><li>Hand-lettering</li>
+            <li>UI / UX</li><li>Packaging</li><li>Art Direction</li>
+          </ul>
+          <a href="#contact" data-link class="btn btn--primary">Work with me</a>
+        </div>
+      </div>
+
+      <div class="loves">
+        <article class="love reveal"><span>🌸</span><h4>Soft palettes</h4><p>Pinks, creams &amp; pastels forever.</p></article>
+        <article class="love reveal"><span>📚</span><h4>Storytelling</h4><p>Every brand has a sweet story.</p></article>
+        <article class="love reveal"><span>🤍</span><h4>Tiny details</h4><p>The little things make the magic.</p></article>
+      </div>
+    </section>
+
+    <!-- ============ GALLERY ============ -->
+    <section class="page" id="gallery" data-page>
+      <div class="section-head reveal">
+        <p class="eyebrow">My favourite pieces</p>
+        <h2>Gallery ✿</h2>
+      </div>
+
+      <div class="filters reveal" role="tablist">
+        <button class="chip is-active" data-filter="all">All</button>
+        <button class="chip" data-filter="branding">Branding</button>
+        <button class="chip" data-filter="illustration">Illustration</button>
+        <button class="chip" data-filter="lettering">Lettering</button>
+      </div>
+
+      <div class="grid" id="grid">
+        <figure class="card reveal" data-cat="branding"  data-title="Moodboard">
+          <img src="assets/gallery-1.svg" alt="Moodboard placeholder" loading="lazy" />
+          <figcaption>Moodboard</figcaption>
+        </figure>
+        <figure class="card reveal" data-cat="illustration" data-title="Sketches">
+          <img src="assets/gallery-2.svg" alt="Sketches placeholder" loading="lazy" />
+          <figcaption>Sketches</figcaption>
+        </figure>
+        <figure class="card reveal" data-cat="branding" data-title="Branding">
+          <img src="assets/gallery-3.svg" alt="Branding placeholder" loading="lazy" />
+          <figcaption>Branding</figcaption>
+        </figure>
+        <figure class="card reveal" data-cat="lettering" data-title="Lettering">
+          <img src="assets/gallery-4.svg" alt="Lettering placeholder" loading="lazy" />
+          <figcaption>Lettering</figcaption>
+        </figure>
+        <figure class="card reveal" data-cat="illustration" data-title="Illustration">
+          <img src="assets/gallery-5.svg" alt="Illustration placeholder" loading="lazy" />
+          <figcaption>Illustration</figcaption>
+        </figure>
+        <figure class="card reveal" data-cat="lettering" data-title="Snapshots">
+          <img src="assets/gallery-6.svg" alt="Snapshots placeholder" loading="lazy" />
+          <figcaption>Snapshots</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="page" id="contact" data-page>
+      <div class="section-head reveal">
+        <p class="eyebrow">Let's create together</p>
+        <h2>Say hello 💌</h2>
+      </div>
+      <div class="contact">
+        <div class="contact__intro reveal">
+          <p>Have a sweet project in mind? I'd love to hear all about it.
+            Fill in the form and I'll get back to you within a day or two. ✿</p>
+          <ul class="contact__list">
+            <li><span>✉️</span> hello@marydesigns.studio</li>
+            <li><span>📍</span> Remote &amp; cosy, worldwide</li>
+            <li><span>⏰</span> Mon–Fri · 9–5</li>
+          </ul>
+          <div class="socials">
+            <a href="#" aria-label="Instagram" class="social">IG</a>
+            <a href="#" aria-label="Dribbble" class="social">Dr</a>
+            <a href="#" aria-label="Pinterest" class="social">Pin</a>
+            <a href="#" aria-label="Behance" class="social">Be</a>
+          </div>
+        </div>
+
+        <form class="contact__form reveal" novalidate>
+          <label>Your name
+            <input type="text" name="name" placeholder="Mary Sunshine" required />
+            <small class="err" data-err="name"></small>
+          </label>
+          <label>Email
+            <input type="email" name="email" placeholder="you@email.com" required />
+            <small class="err" data-err="email"></small>
+          </label>
+          <label>Message
+            <textarea name="message" rows="4" placeholder="Tell me about your lovely idea…" required></textarea>
+            <small class="err" data-err="message"></small>
+          </label>
+          <button type="submit" class="btn btn--primary btn--block">Send with love ♡</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Made with 🩷 by Mary · <span id="year"></span></p>
+  </footer>
+
+  <!-- lightbox -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox__close" aria-label="Close">✕</button>
+    <figure>
+      <img src="" alt="" id="lightbox-img" />
+      <figcaption id="lightbox-cap"></figcaption>
+    </figure>
+  </div>
+
+  <!-- toast -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

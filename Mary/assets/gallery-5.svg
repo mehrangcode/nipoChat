@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="600" height="450" role="img" aria-label="Illustration placeholder">
+  <defs>
+    <linearGradient id="bg5" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFF0E0"/>
+      <stop offset="1" stop-color="#FFC36E"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="450" rx="28" fill="url(#bg5)"/>
+  <circle cx="320" cy="190" r="46" fill="#ffffff" opacity=".35"/>
+  <circle cx="345" cy="285" r="70" fill="#ffffff" opacity=".25"/>
+  <g transform="translate(300 200)" fill="#ffffff" opacity=".9">
+    <circle r="34"/>
+    <circle cx="0" cy="-50" r="26" opacity=".85"/><circle cx="48" cy="-15" r="26" opacity=".85"/>
+    <circle cx="30" cy="42" r="26" opacity=".85"/><circle cx="-30" cy="42" r="26" opacity=".85"/>
+    <circle cx="-48" cy="-15" r="26" opacity=".85"/>
+  </g>
+  <text x="300" y="320" text-anchor="middle" font-family="'Quicksand','Segoe UI',sans-serif" font-size="30" font-weight="700" fill="#ffffff">Illustration</text>
+  <text x="300" y="356" text-anchor="middle" font-family="'Quicksand','Segoe UI',sans-serif" font-size="17" fill="#ffffff" opacity=".85">✿ image placeholder</text>
+</svg>
