@@ -1,0 +1,19 @@
+{
+  "name": "nipo-chat-project",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Nipo Chat — full-stack PWA chat (Express + React + SQLite)",
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "dev": "concurrently -n server,client -c magenta,cyan \"npm run dev -w server\" \"npm run dev -w client\"",
+    "build": "npm run build -w server && npm run build -w client",
+    "start": "npm run start -w server",
+    "vapid": "npm run vapid -w server"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}

@@ -1,0 +1,179 @@
+/* ============================================================
+   Nipo Chat — design tokens
+   Pink primary palette + light/dark themes.
+   Layout uses CSS *logical properties* so RTL works automatically.
+   ============================================================ */
+
+:root {
+  /* Brand scale — indigo */
+  --brand-50: #eef2ff;
+  --brand-100: #e0e7ff;
+  --brand-200: #c7d2fe;
+  --brand-300: #a5b4fc;
+  --brand-400: #818cf8;
+  --brand-500: #6366f1;
+  --brand-600: #4f46e5;
+  --brand-700: #4338ca;
+  --brand-800: #3730a3;
+  --brand-900: #312e81;
+
+  --radius-sm: 8px;
+  --radius: 14px;
+  --radius-lg: 22px;
+  --shadow: 0 6px 24px rgba(49, 46, 129, 0.14);
+  --shadow-sm: 0 2px 8px rgba(49, 46, 129, 0.1);
+
+  --font: 'Vazirmatn', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --transition: 160ms ease;
+}
+
+/* ---- Light theme (default) ---- */
+:root,
+[data-theme='light'] {
+  color-scheme: light;
+  --color-primary: var(--brand-600);
+  --color-primary-strong: var(--brand-700);
+  --color-primary-soft: var(--brand-100);
+  --color-on-primary: #ffffff;
+
+  --color-bg: #f4f5fb;
+  --color-surface: #ffffff;
+  --color-surface-2: #f5f6fd;
+  --color-border: #e3e6f3;
+
+  --color-text: #1e1b3a;
+  --color-text-muted: #6b6a86;
+
+  --bubble-me-bg: linear-gradient(135deg, var(--brand-500), var(--brand-600));
+  --bubble-me-text: #ffffff;
+  --bubble-peer-bg: #ffffff;
+  --bubble-peer-text: #1e1b3a;
+
+  --online: #16a34a;
+  --danger: #dc2626;
+}
+
+/* ---- Dark theme ---- */
+[data-theme='dark'] {
+  color-scheme: dark;
+  --color-primary: var(--brand-400);
+  --color-primary-strong: var(--brand-300);
+  --color-primary-soft: #262450;
+  --color-on-primary: #0f0e1a;
+
+  --color-bg: #0f0e1a;
+  --color-surface: #191830;
+  --color-surface-2: #201f3a;
+  --color-border: #2e2c50;
+
+  --color-text: #e6e8f5;
+  --color-text-muted: #a7a6c4;
+
+  --bubble-me-bg: linear-gradient(135deg, var(--brand-600), var(--brand-700));
+  --bubble-me-text: #ffffff;
+  --bubble-peer-bg: #201f3a;
+  --bubble-peer-text: #e6e8f5;
+
+  --online: #4ade80;
+  --danger: #f87171;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  font-family: var(--font);
+  background: var(--color-bg);
+  color: var(--color-text);
+  transition: background var(--transition), color var(--transition);
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+input,
+textarea {
+  font-family: inherit;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 99px;
+}
+
+/* Utility buttons */
+.btn {
+  border: none;
+  border-radius: var(--radius);
+  padding-block: 12px;
+  padding-inline: 18px;
+  font-size: 15px;
+  font-weight: 600;
+  transition: transform var(--transition), filter var(--transition);
+}
+.btn-primary {
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+}
+.btn-primary:hover {
+  filter: brightness(1.05);
+}
+.btn-primary:active {
+  transform: scale(0.98);
+}
+.btn-ghost {
+  background: transparent;
+  color: var(--color-primary);
+}
+.btn-block {
+  inline-size: 100%;
+}
+.btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-block-end: 14px;
+}
+.field label {
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+.field input {
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text);
+  border-radius: var(--radius-sm);
+  padding-block: 12px;
+  padding-inline: 14px;
+  font-size: 15px;
+  outline: none;
+  transition: border-color var(--transition);
+}
+.field input:focus {
+  border-color: var(--color-primary);
+}
+
+.error-text {
+  color: var(--danger);
+  font-size: 13px;
+  margin-block: 6px;
+}
